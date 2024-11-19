@@ -27,14 +27,15 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        popup: "index.html", // Your popup entry point (React UI)
-        content: "src/content.js", // Add content.js as an entry point
+        content: "src/content.jsx",
       },
 
       output: {
+        format: "module",
         entryFileNames: "assets/[name].js", // Output the JS files into the 'assets' folder
-        chunkFileNames: "assets/[name].js",
+        chunkFileNames: "assets/[name].js", // Output chunked JS files for dynamic imports
         assetFileNames: "assets/[name].[ext]",
+        manualChunks: null,
       },
     },
   },

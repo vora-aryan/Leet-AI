@@ -4,13 +4,13 @@
   "version": "1.0",
   "description": "Leet AI",
   "action": {
-    "default_title": "Leet AI",
-    "default_popup": "index.html"
+    "default_title": "Leet AI"
   },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["assets/content.js"]
+      "js": ["assets/content.js"],
+      "type": "module"
     }
   ],
   "icons": {
@@ -19,5 +19,8 @@
   "permissions": ["scripting", "activeTab", "tabs", "windows"],
   "background": {
     "service_worker": "background.js"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; style-src 'self' 'unsafe-inline';"
   }
 }
