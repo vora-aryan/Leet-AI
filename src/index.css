@@ -1,0 +1,29 @@
+:root {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  width: fit-content;
+  height: fit-content
+  ;
+  background-color: #de7b67;
+}
+
+body {
+  margin: 0 !important;
+}
+
+#root {
+  width: 400px;
+  height: 600px;
+  background-color: #f5f5dc;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: auto;
+  border: #222 solid 2.4px;
+  border-radius: 0.5rem;
+}

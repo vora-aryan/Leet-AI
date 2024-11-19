@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Leet AI",
+  "version": "1.0",
+  "description": "Leet AI",
+  "action": {
+    "default_title": "Leet AI",
+    "default_popup": "index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["assets/content.js"]
+    }
+  ],
+  "icons": {
+    "16": "assets/leetai16.png"
+  },
+  "permissions": ["scripting", "activeTab", "tabs", "windows"],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
